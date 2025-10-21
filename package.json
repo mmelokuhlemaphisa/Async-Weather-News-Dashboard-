@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "dev": "nodemon --exec ts-node src/server.ts"
-  },
+"scripts": {
+  "callback": "ts-node src/callbackVersion.ts",
+  "promise": "ts-node src/promiseVersion.ts",
+  "async": "ts-node src/asyncAwaitVersion.ts"
+},
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mmelokuhlemaphisa/Async-Weather-News-Dashboard-.git"
