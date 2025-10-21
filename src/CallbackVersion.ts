@@ -26,7 +26,8 @@ function fetchNews(callback: (err: Error | null, data?: any) => void) {
 }
 
 
-fetchWeather("Tokyo", (weatherErr, weatherData) => {
+
+fetchWeather("durban", (weatherErr, weatherData) => {
   if (weatherErr) {
     console.error("Error fetching weather data:", weatherErr);
     return;

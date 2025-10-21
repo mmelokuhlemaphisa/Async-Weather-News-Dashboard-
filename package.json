@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-"scripts": {
-  "callback": "ts-node src/callbackVersion.ts",
-  "promise": "ts-node src/promiseVersion.ts",
-  "async": "ts-node src/asyncAwaitVersion.ts"
-},
-
+  "scripts": {
+    "callback": "ts-node src/callbackVersion.ts",
+    "promise": "ts-node src/promiseVersion.ts",
+    "async": "ts-node src/asyncAwaitVersion.ts"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mmelokuhlemaphisa/Async-Weather-News-Dashboard-.git"
@@ -22,6 +21,7 @@
   "homepage": "https://github.com/mmelokuhlemaphisa/Async-Weather-News-Dashboard-#readme",
   "dependencies": {
     "@types/node": "^24.9.1",
+    "axios": "^1.12.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   },
