@@ -11,10 +11,7 @@ const cityCoordinates: { [key: string]: { lat: number; lon: number } } = {
   "new york": { lat: 40.7128, lon: -74.006 },
 };
 
-function fetchWeather(
-  city: string,
-  callback: (err: Error | null, data?: any) => void
-) {
+function fetchWeather(city: string, callback: (err: Error | null, data?: any) => void) {
   const cityLower = city.toLowerCase();
   const coordinates = cityCoordinates[cityLower];
 
@@ -30,8 +27,7 @@ function fetchWeather(
   }
 
   const url = `https://api.open-meteo.com/v1/forecast?latitude=${coordinates.lat}&longitude=${coordinates.lon}&hourly=temperature_2m&current_weather=true`;
-  https
-    .get(url, (res) => {
+  https.get(url, (res) => {
       let data = "";
       res.on("data", (chunk) => (data += chunk));
       res.on("end", () => {
@@ -69,14 +65,11 @@ fetchWeather("cape town", (weatherErr, weatherData) => {
 
     // Display weather data in a user-friendly format
     console.log(`\n=== Weather Data for ${weatherData.city} ===`);
-    console.log(
-      `Coordinates: ${weatherData.latitude}°, ${weatherData.longitude}°`
+    console.log(`Coordinates: ${weatherData.latitude}°, ${weatherData.longitude}°`
     );
 
     if (weatherData.current_weather) {
-      console.log(
-        `Current Temperature: ${weatherData.current_weather.temperature}°C`
-      );
+      console.log(`Current Temperature: ${weatherData.current_weather.temperature}°C`);
       console.log(`Wind Speed: ${weatherData.current_weather.windspeed} km/h`);
     }
 
