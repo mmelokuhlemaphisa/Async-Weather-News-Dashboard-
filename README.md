@@ -92,9 +92,13 @@ Async-Weather-News-Dashboard/
 
 
 "scripts": {
+
   "callback": "ts-node src/CallbackVersion.ts",
+  
   "promise": "ts-node src/PromiseVersion.ts",
+  
   "async": "ts-node src/AsyncAwaitVersion.ts"
+  
 }
 
 ---
